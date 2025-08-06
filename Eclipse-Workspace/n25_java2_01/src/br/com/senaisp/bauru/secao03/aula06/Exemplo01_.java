@@ -1,0 +1,14 @@
+package br.com.senaisp.bauru.secao03.aula06;
+
+import javax.swing.JOptionPane;
+
+public class Exemplo01_ {
+
+	public static void main(String[] args) {
+        String nome = JOptionPane.showInputDialog("Digita seu nome:");
+        JOptionPane.showMessageDialog(null, "Ola," + nome + ", tudo bem?");
+        int idade = Integer.parseInt(JOptionPane.showInputDialog("Digite sua idade:"));
+        JOptionPane.showConfirmDialog(null,"sua idade no ano que vem sera " + (idade + 1) );
+	}
+
+}

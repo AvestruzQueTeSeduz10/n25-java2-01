@@ -1,0 +1,12 @@
+package br.com.senaisp.bauru.secao03.aula06;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio01 {
+	public static void main(String[] args) {
+		JOptionPane.showMessageDialog(null,
+                "qaaa",
+                "ss",
+                JOptionPane.INFORMATION_MESSAGE);
+	}
+}

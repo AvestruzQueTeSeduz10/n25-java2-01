@@ -1,0 +1,12 @@
+package br.com.senaisp.bauru.secao03.aula06;
+
+import javax.swing.JOptionPane;
+
+public class Teste01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		JOptionPane.showMessageDialog(null, "Teste", "Teste", 0);
+	}
+
+}
