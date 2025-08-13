@@ -50,4 +50,26 @@ public class Forca {
                        
 		return linha;
 	}
+	public void lancarLetra(char letra) {
+		if (palavraSecreta.contains((""+letra).toLowerCase())){
+			String apoio="";
+			for (int i=0;i<palavraSecreta.length();i++) {
+				if ((""+letra).toLowerCase().equals(""+palavraSecreta.charAt(i))) {
+					apoio += palavraSecreta.charAt(i);
+				} else {
+					apoio += palavraMascarada.charAt(i);
+				}
+			}
+			palavraMascarada = "" + apoio;
+		}else {
+			erros++;//Aumenta um no erro
+			System.out.println("A letra " + letra + " nao esta no texto!");
+		}
+	}
+	public boolean ehfimDeJogo() {
+		return erros>=6 || !palavraMascarada.contains("_");
+	}
+	public String getPalavraRevelada() {
+		return ehfimDeJogo() ? palavraSecreta : "";
+	}
 }
