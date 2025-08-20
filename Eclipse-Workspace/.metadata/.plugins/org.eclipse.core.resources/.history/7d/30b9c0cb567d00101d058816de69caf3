@@ -1,0 +1,22 @@
+package br.com.senaisp.bauru.secao08.aula13;
+
+import java.util.Scanner;
+
+public class BlackJackGamesTest {
+
+	public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        BlackJackGame gam = new BlackJackGame();
+        String nomejogador;
+        do {
+        	System.out.println("Digite o nome do player (sair p/terminar);");
+        	nomejogador = sc.nextLine();
+        	if (nomejogador.toLowerCase().equals("sair")) {
+        		BlackJackPlayer pla = new BlackJackPlayer();
+        		pla.setNome(nomejogador);
+        		gam.getClass().add(pla);
+        	}
+        } while (!nomejogador.equals("sair") &&
+	}
+
+}
