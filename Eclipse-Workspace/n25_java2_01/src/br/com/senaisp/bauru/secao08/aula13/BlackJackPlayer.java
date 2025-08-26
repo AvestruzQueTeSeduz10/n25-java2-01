@@ -5,18 +5,19 @@ import java.util.ArrayList;
 import br.com.senaisp.bauru.secao05.aula11.Carta;
 
 public class BlackJackPlayer {
-    private String nome;
-    private ArrayList<Carta> cartas;
-    private boolean perdedor;
-    private boolean ganhador;
-    private boolean parou;
-    public BlackJackPlayer() {
-    	cartas = new ArrayList<Carta>();
-    	perdedor = false;
-    	ganhador = false;
-    	parou = false;
-    	nome = "Sem  nome";
-    }
+	private String nome;
+	private ArrayList<Carta> cartas;
+	private boolean perdedor;
+	private boolean ganhador;
+	private boolean parou;
+	//Constructor
+	public BlackJackPlayer() {
+		cartas = new ArrayList<Carta>();
+		perdedor = false;
+		ganhador = false;
+		parou = false;
+		nome = "Sem nome";
+	}
 	public String getNome() {
 		return nome;
 	}
@@ -44,11 +45,11 @@ public class BlackJackPlayer {
 	public ArrayList<Carta> getCartas() {
 		return cartas;
 	}
-    public int getTotalCarta() {
-    	int tot = 0;
-    	for(Carta ct : cartas) {
-    		tot += ct.getValor();
-    	}
-    	return tot;
-    }
+	public int getTotalCarta() {
+		int tot = 0;
+		for(Carta ct : cartas) {
+			tot += ct.getValor();
+		}
+		return tot;
+	}
 }
