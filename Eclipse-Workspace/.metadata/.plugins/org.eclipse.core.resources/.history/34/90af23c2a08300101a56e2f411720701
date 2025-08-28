@@ -1,0 +1,13 @@
+package br.com.senaisp.bauru.aguero.classes;
+
+import java.sql.SQLException;
+
+public class ProdutoTest {
+
+	public static void main(String[] args) {
+        Produto prd = Produto.create("Produto xpto", 5.0, 15.20);
+	} catch (SQLException e) {
+		e.printStackTrace();
+	}
+
+}
