@@ -2,6 +2,7 @@ package br.com.senaisp.bauru.aguero.classes;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Scanner;
 
 public class ProdutoTest {
 
@@ -13,6 +14,17 @@ public class ProdutoTest {
         for (Produto prod: lista) {
         	System.out.println(prod.getDescricao() + " - " + prod.getId());
         }
+        System.out.println("informe o id a ser pesquisado: ");
+        Scanner sc = new Scanner(System.in);
+        int pId = sc.nextInt();
+        prd = Produto.consultarProdutoPorId(pId);
+        if (prd !=null) {
+        	System.err.println("Produto: " + prd.getDescricao());
+        	prd.setDescricao("Produto alterado - XPTO");
+        	prd.setPreco(15.90);
+        	prd.atualizarBanco();
+        }
+        sc.close();
 	} catch (SQLException e) {
 		e.printStackTrace();
 	}
