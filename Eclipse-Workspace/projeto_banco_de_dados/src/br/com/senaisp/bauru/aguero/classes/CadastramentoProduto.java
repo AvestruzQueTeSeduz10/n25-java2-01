@@ -42,9 +42,23 @@ public class CadastramentoProduto {
 		} while (op != 9);
 	}
 
-	private static Object excluirProduto(Scanner sc) {
-		// TODO Auto-generated method stub
-		return null;
+	private static void excluirProduto(Scanner sc) {
+		do {
+			Produto prod = pesquisarProduto(sc);
+			if (prod!=null) {
+				mostrarProduto(prod);
+				String conf = confirmarOperacao("Deseja exluir o registro? (S/N)", sc);
+				if (conf.toLowerCase().equals("S")) {
+					prod.apagarRegistro();
+				}
+				conf = confirmarOperacao("Deseja continuar excluindo? (S/N)", sc);
+				if(conf.toLowerCase().equals("n")) {
+					break;
+				}
+			}else {
+				System.out.println("Produto nao encontrado!");
+			}
+		}while(true);
 	}
 
 	private static void alterarProduto(Scanner sc) {
@@ -56,6 +70,10 @@ public class CadastramentoProduto {
 				String conf = confirmarOperacao("Deseja Gravar as alteracoes? (S/N)", sc);
 				if (conf.toLowerCase().equals("S")) {
 					prod.atualizarBanco();
+				}
+				conf = confirmarOperacao("Deseja continuar alterando? (S/N)", sc);
+				if(conf.toLowerCase().equals("n")) {
+					break;
 				}
 			}else {
 				System.out.println("Produto nao encontrado!");
@@ -90,6 +108,7 @@ public class CadastramentoProduto {
 				System.out.println("Digite o id a ser pesquisado: ");
 				try {
 				    int pID = sc.nextInt();
+				    sc.nextLine();
 				    prod = Produto.consultarProdutoPorId(pID);
 				    break;
 			}catch(InputMismatchException e) {
@@ -147,6 +166,7 @@ public class CadastramentoProduto {
 
 		System.out.println("Digite o saldo: ");
 		prod.setPreco(sc.nextDouble());
+		sc.nextLine();
 	}
 
 	private static String confirmarOperacao(String msg, Scanner sc) {
