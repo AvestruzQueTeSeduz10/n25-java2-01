@@ -1,14 +1,42 @@
 package br.com.senaisp.bauru;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class JavaFX_Main extends Application {
 	@Override
-	public void start(Stage arg0) throws Exception {
+	public void start(Stage primaryStage) throws Exception {
 		Button btn = new Button();
-		btn.setText("Ola mundo!");
+		btn.setText("Diga \"Ola mundo!\"");
+		btn.setOnAction(new EventHandler<ActionEvent>() {
+			
+			@Override
+			public void handle(ActionEvent arg0) {
+				System.out.println("Ola mundo!");
+			}
+		});
+		Button btn02 = new Button("Novo botao");
+		
+		
+		StackPane root = new StackPane();
+		root.getChildren().add(btn);
+		root.getChildren().add(btn02);
+		
+		Scene cena = new Scene(root,300,500);
+		primaryStage.setTitle("Minha primeira janela no javaFX");
+		primaryStage.setScene(cena);
+		primaryStage.show();
+		
+	}
+	
+	public static void main(String[] args) {
+		launch(args);
+		
 	}
 
 }
