@@ -37,5 +37,19 @@
     <fullyQualifiedTypeName name="javafx.scene.layout.HBox"/>
     <fullyQualifiedTypeName name="java.awt.Rectangle"/>
     <fullyQualifiedTypeName name="javafx.scene.shape.Rectangle"/>
+    <fullyQualifiedTypeName name="java.awt.Image"/>
+    <fullyQualifiedTypeName name="javafx.scene.image.Image"/>
+    <fullyQualifiedTypeName name="javafx.scene.Scene"/>
+    <fullyQualifiedTypeName name="javafx.scene.text.Font"/>
+    <fullyQualifiedTypeName name="javafx.scene.text.FontWeight"/>
+    <fullyQualifiedTypeName name="javafx.scene.shape.StrokeType"/>
+    <fullyQualifiedTypeName name="javafx.scene.shape.StrokeLineCap"/>
+    <fullyQualifiedTypeName name="javafx.scene.shape.StrokeLineJoin"/>
+    <fullyQualifiedTypeName name="com.sun.scenario.effect.DropShadow"/>
+    <fullyQualifiedTypeName name="com.sun.prism.paint.Color"/>
+    <fullyQualifiedTypeName name="javafx.scene.text.TextAlignment"/>
+    <fullyQualifiedTypeName name="javafx.scene.layout.Priority"/>
+    <fullyQualifiedTypeName name="java.awt.Polygon"/>
+    <fullyQualifiedTypeName name="javafx.scene.shape.Polygon"/>
     <fullyQualifiedTypeName name="javafx.scene.paint.Color"/>
 </qualifiedTypeNameHistroy>
